@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Форма</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/main.css">
+  <script>
+    function show_hide_password(target){
+	var input = document.getElementById('password-input');
+	if (input.getAttribute('type') == 'password') {
+		target.classList.add('view');
+		input.setAttribute('type', 'text');
+	} else {
+		target.classList.remove('view');
+		input.setAttribute('type', 'password');
+	}
+	return false;
+}
+  </script>
+</head>
+<body>
+  <div class="container">
+    <form action="" class="password">
+      <h2>Форма входа</h2>
+      <input type="email" id="" placeholder="Email" name="email">
+      <div class="password-container">
+        <input type="password" id="password-input" placeholder="Password" name="password">
+        <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+      </div>
+      <button>авторизироватся</button>
+      <p><a href="">У вас нет учетной записи?</a><a href="">&nbsp;Зарегистрироватся</a></p> 
+    </form>
+    
+  </div>
+</body>
+</html>
